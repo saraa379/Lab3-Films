@@ -224,6 +224,7 @@ header {
 #content {
 	width: 100%;
 	color: white;
+	min-height: 600px;
 }	
 	#headerContent {
 		width: 100%;
@@ -238,7 +239,7 @@ header {
 	}	
 	#sortDiv select {
 		height: 25px;
-		width: 80px;
+		width: 100px;
 	} 
 	#headerContent h2 {
 		font-size: 1.2rem;
@@ -354,7 +355,7 @@ footer {
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	padding: 1rem;
+	
 }
 
 /*Media queries*/
@@ -418,4 +419,3 @@ footer {
 		margin-left: 5px;
 	}
 }
-
