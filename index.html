@@ -1,0 +1,128 @@
+<!--    Lab 3 - Films,   Sarantsetseg Hedenfalk   -->
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Lab 3 - Films - Sara</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+	<script src="script/scripts.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<h3 id="logo">Film databas</h3>
+
+		<!--    Search field   -->
+		<div class="searchBox">
+		  <div class="searchContainer">
+		    <input type="search" id="search" placeholder="Search..." />
+		    <button id="btnSearch"><i class="fas fa-search"></i></button>
+		  </div>
+		</div><!--end of Search field-->
+
+	</header>
+
+	<div id="wrap">	
+
+		<!--    Add film section   -->
+		<section id="addFilm">
+			<button id="btnAddFilm">Lägg till film<i id="arrow" class="fas fa-caret-down"></i>
+			</button>
+
+			<div id="formAddFilm">
+
+				<label for="namnFilm">Filmens namn</label>
+				<input type = "text" id = "namnFilm" placeholder="Filmens namn ..." />
+
+				<label for="arFilm">Filmens premiärår</label>
+				<input type = "text" id = "arFilm" placeholder="Filmens år ..." />
+
+				<label for="regissorFilm">Regissör</label>
+				<input type = "text" id = "regissorFilm" placeholder="Regissör ..." />
+
+				<button id="btnAddFilm2">Lägg till
+				</button>
+
+				<p id="errorP">Error comes here</p>
+				
+			</div><!--end of formAddFilm-->
+
+		</section><!--end of addFilm-->
+
+<!--    section content   -->
+		<section id="content">
+			
+			<div id="headerContent">
+				<h2>Filmer</h2>
+
+				<div id="sortDiv">
+					<label for="sortOptions">Sortera efter</label>
+					<select id="selectSort" name="sortOptions">
+						<option value="">Sortera efter …</option>
+					    <option value="titel">Titel</option>
+					    <option value="director">Regissör</option>
+					    <option value="ar">Premiärår</option>
+					</select>		
+				</div><!--end of sortDiv-->
+		
+			</div><!--end of headerContent-->
+
+
+			<div id="table">
+			<!--
+					<div id="tableHead">
+						<p id="namnP">Namn</p>
+						<p id="arP">År</p>
+						<p id="directorP">Regissör</p>
+					</div><!-end of tabelHead-->
+
+
+					<div id="tableContent">
+					<!--
+						<div id="tableRow">
+							<p id="namnRow">Hunger games: Catching Fire</p>
+							<p id="arRow">2000</p>
+							<p id="directorRow">David Henriksson</p>
+							<button><i class="fas fa-times"></i><button>
+						</div><!-end of tableRow-->
+
+					</div><!--end of tableContent-->		
+			</div><!--end of table-->
+
+			<div id="pages">
+
+			<!--
+				<button class="page active">1</button>
+				<button class="page">2</button>
+				<button class="page">3</button>
+				<button class="page">4</button>-->
+
+			</div>
+
+			
+			
+		</section>
+
+
+	</div><!--end of wrap-->
+
+
+	
+
+	
+
+
+		
+
+
+	<footer>
+	</footer>
+</body>
+</html>

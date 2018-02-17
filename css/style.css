@@ -1,0 +1,421 @@
+* {
+	box-sizing: border-box;
+}
+
+/*
+colors
+
+text colors
+black : #212121 (on white, bg)
+grey: #075075; (on white)
+red warning: DD2C00;
+
+BG
+blue-header: #138bf4;
+blue-hero: 039BE5;
+section-grey: #ECEFF1; (lightgrey bg)
+footer dark grey: #78909C, #030342, #343d46;
+/*linear-gradient(rgba(0,0,75,0.5),rgba(0,0,55,0.7)),*/
+/*background-color: rgb(0,0,75);*/
+
+html {
+	
+	font-size: 16px;
+	min-width: 250px;
+}
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	word-wrap: break-word;
+	line-height: 30px;
+	margin: 0;
+	position: relative;
+	background-image:
+			url('../img/header.jpg');
+	background-position: center 30%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 0;
+	min-width: 250px;
+	min-height: 600px;
+	
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	transition: all .3s ease-in-out;
+}
+
+/*Header styles*/
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	background-color: black;
+	opacity: 0.7;
+	color: white;
+	z-index: 1;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	min-width: 250px;
+	top: 0;
+}
+	#logo {
+		font-size: 1.2rem;
+		padding-left: 20px;
+		padding-top: 5px;
+	}
+	
+
+	/*Search box styles*/
+	.searchBox {
+		/*position: absolute;*/
+  		width: 250px;
+  		height: 30px;
+  		margin-top: 5px;
+  		margin-right: 10px;
+  		display: none;
+	}
+	.searchContainer {
+		overflow: hidden;
+  		width: 250px;
+  		vertical-align: middle;
+  		white-space: nowrap;
+  		position: relative;
+		
+	}
+	.searchContainer input#search{
+		  width: 250px;
+		  height: 30px;
+		  background: #2b303b;
+		  border: none;
+		  font-size: 10pt;
+		  float: left;
+		  color: #fff;
+		  padding-left: 15px;
+		  border-radius: 5px;
+		}
+
+		#btnSearch {
+		  border-top-right-radius: 5px;
+		  border-bottom-right-radius: 5px;
+		 
+		  border: none;
+		  background-color: #232833;
+
+		  height: 30px;
+		  width: 30px;
+		  color: #4f5b66;
+		  font-size: 10pt;
+		 
+		  outline: none;
+		  padding-right: 0;
+		  padding-left: 0;
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		}
+		 
+		  .searchContainer:hover #btnSearch:hover{
+		    background: #212121;
+		  }
+
+/*Body of the page*/
+
+#wrap {
+	width: 80%;
+	margin: 60px auto;
+	background-color: black;
+	opacity: 0.8;
+	padding-bottom: 1rem;
+	padding-bottom: 30px;
+}
+
+
+/*Section addFilm styles*/
+
+#addFilm {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	padding-top: 10px;
+	transition: all 0.2s ease-in-out;
+}
+	#btnAddFilm {
+		width: 200px;
+		height: 40px;
+		border-radius: 4px;
+		color: #ECEFF1;
+		text-align: center;
+		position: relative;
+		border: none; 
+		font-size: 1.1rem;
+		background-color: transparent;
+		margin: auto
+	}
+		#btnAddFilm:hover {
+			color: #343d46;
+		}
+		#btnAddFilm i {
+			padding-left: 8px;
+		}
+
+	#formAddFilm {
+		padding: 10px;
+		position: relative;
+		margin: auto;
+		display: none;
+		transition: all 0.2s ease-in-out;
+	}
+
+		#formAddFilm input[type="text"] {
+			display: block;
+			color: #0F1626;
+			margin-left: 20px;
+			margin-top: 5px;
+			margin-bottom: 15px;
+			height: 30px;
+			max-width: 250px;
+			font-size: 1rem;
+			padding-left: 8px;
+		}
+		#formAddFilm label {
+			display: block;
+			color: #0F1626;
+			margin-left: 20px;
+			margin-top: 10px;
+			font-size: 1rem;
+			color: white;
+		}
+		#btnAddFilm2 {
+			display: block;
+			color: white;
+			margin-left: 20px;
+			margin-top: 5px;
+			margin-bottom: 15px;
+			height: 30px;
+			width: 150px;
+			font-size: 1rem;
+			padding-left: 8px;
+			background-color: black;
+		}
+		#btnAddFilm2:hover {
+			background-color: #212121;
+		}
+		#formAddFilm p {
+			color: white;
+			display: none;
+			margin-left: 20px;
+			margin-top: 10px;
+			font-size: 1rem;
+		}
+
+/*Section Content styles*/
+#content {
+	width: 100%;
+	color: white;
+}	
+	#headerContent {
+		width: 100%;
+		height: 50px;
+		background-color: #212121;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 10px;
+	}	
+	#sortDiv select {
+		height: 25px;
+		width: 80px;
+	} 
+	#headerContent h2 {
+		font-size: 1.2rem;
+	}
+
+/*Table head styles*/
+	#table {
+		width: 100%;
+	}
+	 #tableHead {
+	 	width: 100%;
+	 	height: 40px;
+	 	display: flex;
+	 	flex-flow: row nowrap;
+	 	justify-content: flex-start;
+	 	font-size: 1.2rem;
+	 	font-weight: bold;
+	 	align-items: center;
+	 }
+	 #arP {
+	 	width: 100px;
+	 }
+	 #directorP {
+	 	width: 250;
+	 	padding-right: 10px;
+	 }
+	 #namnP {
+	 	width: 500px;
+	 	padding-left: 10px;
+	 }
+
+	 /*Table content styles*/
+	 #tableContent {
+	 	width: 100%;
+	 }
+	 #tableRow {
+	 	width: 100%;
+	 	background-color: grey;
+	 	display: flex;
+	 	flex-flow: row nowrap;
+	 	justify-content: space-around;
+	 	font-size: 1.2rem;
+	 	align-items: center;
+	 	color: black;
+	 	border: 1px solid #ddd;
+	 	padding-top: 5px;
+	 	padding-bottom: 5px;
+	 	position: relative;
+	 }
+	 	#tableRow p {
+	 		margin: 0;
+	 		padding-left: 10px;
+	 	}
+	 	#arRow {
+		 	width: 100px;
+		 }
+		#directorRow {
+		 	width: 250px;
+		 }
+		#namnRow {
+		 	width: 500px;
+		 }
+		 #tableRow button {
+		 	display: block;
+			color: white;
+			margin-left: 20px;
+			height: 40px;
+			width: 40px;
+			background-color: #212121;
+			margin-right: 10px;
+			border: none;
+		 }
+		 #tableRow i {
+		 	color: #ECEFF1;
+		 }
+
+	/*Table content styles*/
+	#pages {
+		width: 100%;
+		margin: 10px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		padding-top: 30px;
+	}
+		#pages .page {
+			padding: 8px 16px;
+			border: none;
+			background-color: transparent;
+			color: white;
+			font-size: 1.2rem;
+			transition: background-color .3s;
+		}
+
+		#pages .page:hover {
+			color: hotpink;
+			font-weight: bold;
+			font-size: 1.3rem;
+		}
+		#pages .active {
+			font-weight: bold;
+			background-color: white;
+			color: #212121;
+		}	
+
+/*Section Login styles*/
+
+footer {
+	background-color: black;
+	opacity: 0.9;
+	height: 40px;
+	min-height: 40px;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	padding: 1rem;
+}
+
+/*Media queries*/
+@media (max-width: 300px) {
+	
+		 
+}
+@media (max-width: 800px) {
+	#wrap {
+		width: 100%;
+	}
+	#directorRow {
+		padding-left: 10px;
+	}
+
+}
+@media (max-width: 500px) {
+	#tableHead {
+		display: none;
+	}
+	#tableRow {
+	 	flex-flow: column nowrap;
+	 	justify-content: flex-start;
+	 }
+	 #tableRow p {
+	 	align-self: flex-start;
+	 }
+	 #tableRow button {
+	 	position: absolute;
+	 	top: 7px;
+	 	right: 10px;
+	 }
+	
+}
+@media (max-width: 400px) {
+	
+	.searchBox {
+  		margin-left: 10px;
+  		margin-bottom: 15px;
+
+	}
+	
+}
+@media (max-width: 370px) {
+	
+}
+
+@media (max-width: 350px) {
+	#formAddFilm input[type="text"] {
+		margin-left: 0;
+		padding-left: 5px;
+	}
+	#formAddFilm label {
+		margin-left: 5px;
+	}
+	#btnAddFilm2 {
+		margin-left: 0;
+		padding-left: 5px;
+	}
+	#formAddFilm p {
+		margin-left: 5px;
+	}
+}
+
